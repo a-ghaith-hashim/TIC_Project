@@ -1,0 +1,62 @@
+{% extends "home_base.html" %}
+{% load static %}
+<title>{% block title %}Cart{% endblock title %}</title>
+    <!-- ===== CSS ===== -->
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'baseCss/cart.css' %}">
+    {% endblock css %}
+    {% block content %}
+    <div class="cart-body">
+      <div class="CartContainer">
+        <div class="cart-header">
+          <h3 class="cart-Heading">Shopping Cart</h3>
+          <h5 class="cart-Action">Remove all</h5>
+        </div>
+        <hr />
+        <form action="{% url 'checkout_cart' %}" method="post" class="myForm">
+          {% csrf_token %}
+          {% for item in  cart_items %}
+          <div class="Cart-Items">
+            <div class="cart-image-box">
+              <img src="{{item.book.photo_book.url}}" style="height: 120px" />
+            </div>
+            <div class="cart-about">
+              <h1 class="cart-title">{{item.book.title}}</h1>
+            </div>
+
+            <div class="cart-counter">
+              <input class="cart-count" type="number" name="quantity_{{ item.id }}" min="1" value="{{ item.quantity }}">
+            </div>
+            
+            <div class="cart-prices">
+              <div class="cart-amount" id="cart-amount">
+                {% if item.dealing_type == "rent" %}
+                {{ item.rental_price|floatformat:1}}
+                {% else %}
+                {{ item.book.price|floatformat:1 }}
+                {% endif %}
+              </div>
+              <div class="cart-remove">
+                <u>Remove</u>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          <hr class="cart-hr" />
+          <div class="checkout">
+            <div class="cart-total">
+              <div>
+                <div class="cart-Subtotal">Sub-Total</div>
+                <div class="cart-items">{{ cart_items|length }} items</div>
+              </div>
+              <div class="cart-total-amount" id="cart-total-amount">
+
+              </div>
+            </div>
+            <button class="ckbutton" type="submit" >Checkout</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="{% static 'assets/js/index.js' %}"></script>
+{% endblock content %}

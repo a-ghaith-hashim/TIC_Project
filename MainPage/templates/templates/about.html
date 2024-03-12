@@ -1,0 +1,44 @@
+{% extends "home_base.html" %}
+{% load static %}
+<title>{% block title %}About{% endblock title %}</title>
+    {% block css %}
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="{% static 'baseCss/about.css' %}">
+    {% endblock css %}
+    {% block content %}
+
+    <section class="about_section layout_padding">
+      <div class="containerabout">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="/static/assets/images/about.jpg" alt="About" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="detail-box">
+              <div class="heading_container">
+                <br />
+                <h2>About Our Bookstore</h2>
+              </div>
+              <p>
+                The "Book Store" is an online store specializing in selling
+                books. The store offers a wide range of books in various fields
+                such as literature, science, history, arts, and more. Customers
+                can easily browse the website and choose the books they want to
+                purchase, and they can also search for specific books using the
+                advanced search engine.<br /><br />Additionally, the "Book
+                Store" offers regular promotions and discounts on some books,
+                helping customers get their favorite books at affordable prices.
+                The "Book Store" is an ideal destination for book lovers looking
+                for a unique and easy online shopping experience.
+              </p>
+              <a href="{% url "homePage" %}"> Home </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="{% static 'assets/js/index.js' %}"></script>
+{% endblock content %}

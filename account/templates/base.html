@@ -1,0 +1,47 @@
+{% load static %}
+<!-- Loading static files using the 'static' template tag -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %} {% endblock %}</title>
+    <!-- Defining the title content for the page -->
+
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Home.css'%}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/ionicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/fonts/boxicons.min.css' %}">
+    <link rel="icon" href="{% static 'assets/images/icon1.png' %}" type="image/png">
+    <!-- Linking the base.css stylesheet from the static files directory -->
+</head>
+<body>
+    {% include "includes/navBar.html" %}
+
+
+    {% if messages %}
+        <!-- Displaying messages if available -->
+        <ul class="messages">
+            {% for message in messages %}
+                <!-- Iterating through messages -->
+                <li class="{{message.tags}}">
+                    <!-- Applying message tags as classes -->
+                    {{message|safe}}
+                    <!-- Displaying the message content -->
+                </li>
+                <a href="#" class="close">X</a>
+                <!-- Closing button for each message -->
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <!-- End of messages section -->
+
+    <div id="content">
+        <!-- Content section of the page -->
+        {% block content %} {% endblock %}
+        <!-- Displaying the specific content for each page -->
+    </div>
+    <!-- End of content -->
+{% include "includes/footer.html" %}
+</body>
+</html>
+<!-- End of HTML document -->

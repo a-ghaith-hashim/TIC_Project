@@ -1,0 +1,276 @@
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  width: 85%;
+  background-color: antiquewhite;
+  margin-bottom: 40px;
+  margin-left: 8%;
+  margin-top: 100px;
+  margin-right: 7%;
+  text-align: right;
+  border-radius: 20px;
+  padding-left: 20px;
+  direction: rtl;
+}
+
+.left-column {
+  width: 50%;
+  position: relative;
+  margin: 20px;
+  text-align: left;
+  align-items: center;
+  margin-top: 80px;
+  direction: ltr;
+}
+
+.right-column {
+  width: 50%;
+  margin-top: 50px;
+}
+
+.right-column img {
+  height: 600px;
+  width: 350x;
+  padding: 30px;
+}
+
+.right-column img.active {
+  opacity: 1;
+}
+
+.name_author {
+  font-size: 20px;
+}
+
+.product {
+  border-bottom: 1px solid #e1e8ee;
+  margin-bottom: 20px;
+}
+
+.product {
+  font-size: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.product-p {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgb(90, 87, 87);
+  line-height: 24px;
+}
+
+.myForm {
+  margin-top: 40px;
+}
+
+.rent {
+  font-size: 25px;
+  font-weight: 200px;
+}
+
+.rent2 {
+  font-size: 25px;
+  font-weight: 200px;
+}
+
+.buy {
+  font-size: 25px;
+  font-weight: 200px;
+}
+
+.price {
+  margin-top: 30px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.price span {
+  font-size: 25px;
+  color: black;
+  display: inline;
+}
+
+.cart {
+  display: inline-block;
+  background-color: #bc5801;
+  border-radius: 6px;
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px 10px;
+  transition: all 0.5s;
+  margin-top: 60px;
+}
+
+.cart {
+  background-color: #bc5801;
+}
+
+.evaluation {
+  display: inline-block;
+  background-color: #bc5801;
+  border-radius: 6px;
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px 10px;
+  transition: all 0.5s;
+  margin-top: 60px;
+}
+
+.send {
+  display: inline-block;
+  background-color: #bc5801;
+  border-radius: 6px;
+  font-size: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px 10px;
+  transition: all 0.5s;
+  margin-top: 60px;
+}
+
+.book_review textarea {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.reviews h5 {
+  font-size: 25px;
+}
+
+.details p {
+  margin-top: 10px;
+}
+
+.book_review {
+  font-size: 25px;
+}
+
+.reviews {
+  display: none;
+}
+
+.checked {
+  color: orange;
+}
+
+.details i {
+  font-size: 20px;
+}
+
+.rating_wrapper {
+  display: inline-block;
+  direction: rtl;
+}
+
+.rating_wrapper #star-1,
+#star-2,
+#star-3,
+#star-4,
+#star-5 {
+  display: none;
+}
+
+.rating_wrapper label {
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s;
+}
+
+.rating_wrapper label:before {
+  font-size: 30px;
+  content: "\2605";
+}
+
+.rating_wrapper input:checked ~ label,
+.rating_wrapper label:hover,
+.rating_wrapper label:hover ~ label {
+  color: #ff9e0b;
+  transition: color 0.3s;
+}
+
+/* Styles for smaller screens */
+@media only screen and (max-width: 600px) {
+  /* Adjust the layout to a single column */
+
+  .details {
+    display: block;
+    margin-top: 90px;
+    margin-left: 8%;
+    margin-right: 7%;
+    margin-bottom: 20px;
+  }
+
+  .right-column {
+    width: 100%;
+    text-align: center;
+    align-content: center;
+  }
+
+  .left-column {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Reduce the image size and padding */
+  .right-column img {
+    height: 300px;
+    width: 175px;
+    padding: 15px;
+  }
+
+  /* Reduce the font size and margin */
+  .name_author,
+  .product,
+  .rent,
+  .rent2,
+  .buy,
+  .price,
+  .cart,
+  .evaluation,
+  .book_review,
+  .reviews h5 {
+    font-size: 16px;
+  }
+
+  .product-p,
+  .book_review textarea,
+  .details p,
+  .details i {
+    font-size: 14px;
+  }
+
+  .product,
+  .myForm,
+  .price,
+  .review_box {
+    margin: 10px;
+  }
+
+  .cart,
+  .evaluation {
+    margin-top: 30px;
+  }
+
+  .evaluation {
+    margin-bottom: 10px;
+  }
+
+  /* .details p {
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    margin-inline-start: 15px;
+  } */
+
+  #rental_days{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    float: right;
+  }
+}

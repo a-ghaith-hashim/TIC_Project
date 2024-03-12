@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+<!-- Extending the template: Uses the "base.html" template as the base for this page -->
+
+{% block title %} Dashboard {% endblock %}
+<!-- Defining the title content for this page as "Dashboard" -->
+
+{% block content %}
+    <!-- Starting the main content block -->
+   <div style="margin-top: 100px ;"> <h1>Dashboard</h1></div>
+    <!-- Main heading -->
+
+    <div style="margin-bottom:200px ; margin-top: 100px; font-size: 25px;" ><p>
+        Welcome to your dashboard.
+        <!-- Welcome message for the user -->
+
+        You can <a href="{% url 'edit' %}">edit your profile</a>
+        <!-- Link to edit the user profile, redirects to the 'edit' URL -->
+
+        or you can <a href="{% url 'password_change' %}">change your password</a>
+        <!-- Link to change the user's password, redirects to the 'password_change' URL -->
+    </p>
+    </div>
+{% endblock %}
+<!-- End of the main content block -->

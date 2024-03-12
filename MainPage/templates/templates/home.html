@@ -1,0 +1,222 @@
+{% extends "home_base.html" %}
+{% load static %}
+<title>{% block title %}Home{% endblock title %}</title>
+    <!-- ===== CSS ===== -->
+    {% block css %}
+    <link rel="stylesheet" href="{% static 'baseCss/homebody.css' %}" />
+    {% endblock css %}
+    {% block content %}
+    <div class="infohome">
+      <div class="info-side">
+        <div class="info">
+          <h1>Welcome!</h1>
+          <br /><br />
+          <a href="#"><i class="bx bxs-quote-alt-left"></i></a>
+          <h2>Hi, we <span>BookStore!</span></h2>
+          <p>
+            We offer book selling and renting services via the Internet.<br />
+            We are pleased that you have joined our website.<br />We wish you good
+            luck in choosing the best books.
+          </p>
+          <br />
+          <a href="#"><i class="bx bxs-quote-alt-right"></i></a>
+        </div>
+      </div>
+    </div>
+    <section id="featured-books" class="py-5 my-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-header align-center">
+              <h2 class="section-title">Featured Books</h2>
+            </div>
+    
+            <div class="product-list">
+              <div class="row">
+                {% for book in allBooks %}
+                <div class="col-md-3">
+                  <div class="product-item">
+                    <figure class="product-style">
+                      <img
+                        src="{{book.photo_book.url}}"
+                        alt="Books"
+                        class="product-item"
+                      />
+                    </figure>
+                    <figcaption>
+                      <a href="#" target="_blank"> <h3>{{book.title}}</h3></a>
+                      <span>{{book.author}}</span>
+                      <div class="item-price">$ {{book.price}}</div>
+                    </figcaption>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+              <!--ft-books-slider-->
+            </div>
+            <!--grid-->
+          </div>
+          <!--inner-content-->
+        </div>
+    
+        <div class="row">
+          <div class="col-md-12">
+            <div class="btn-wrap align-right">
+              <a href="{% url 'books' %}" class="btn-accent-arrow"
+                >View all books <i class="ion-arrow-right-c"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="quotation" class="align-center pb-5 mb-5">
+      <div class="inner-content">
+        <h2 class="section-title divider">Quote from a book</h2>
+        <blockquote data-aos="fade-up">
+          <p>
+            <i class="bx bxs-quote-alt-left"></i>Reading gives us the power of
+            imagination to create new worlds and live different lives every time we
+            open a new book.<i class="bx bxs-quote-alt-right"></i>
+          </p>
+          <div class="qubook-name">From the book: "Matilda"</div>
+        </blockquote>
+      </div>
+    </section>
+    <!-- Newer Book -->
+    <section id="featured-books" class="py-5 my-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-header align-center">
+              <h2 class="section-title">Newer Books</h2>
+            </div>
+    
+            <div class="product-list">
+              <div class="row">
+                {% for book in allBooks %}
+                <div class="col-md-3">
+                  <div class="product-item">
+                    <figure class="product-style">
+                      <img
+                        src="{{book.photo_book.url}}"
+                        alt="Books"
+                        class="product-item"
+                      />
+                    </figure>
+                    <figcaption>
+                      <a href="#" target="_blank"><h3>{{book.title}}</h3> </a>
+                      <span>{{book.author}}</span>
+                      <div class="item-price">$ {{book.price}}</div>
+                    </figcaption>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+              <!--ft-books-slider-->
+            </div>
+            <!--grid-->
+          </div>
+          <!--inner-content-->
+        </div>
+    
+        <div class="row">
+          <div class="col-md-12">
+            <div class="btn-wrap align-right">
+              <a href="{% url 'books' %}" class="btn-accent-arrow"
+                >View all books <i class="ion-arrow-right-c"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 	team -->
+    <div class="responsive-container-block outer-container" id="link-team">
+      <div class="responsive-container-block inner-container">
+        <p class="text-blk section-head-text">Contact with the team</p>
+        <p class="text-blk section-subhead-text">
+          This team is the one who designed and programmed this website.
+        </p>
+        <div class="responsive-container-block">
+          <div
+            class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container"
+          >
+            <div class="team-card">
+              <div class="img-wrapper">
+                <img class="team-img" src="static/assets/images/ghaith.png" />
+              </div>
+              <p class="text-blk name">Ghaith</p>
+              <p class="text-blk position">Back-end</p>
+              <div class="social-media-links">
+                <a href="http://www.twitter.com/" target="_blank">
+                  <i class="ion-social-twitter"></i>
+                </a>
+                <a href="http://www.facebook.com/" target="_blank">
+                  <i class="ion-social-facebook"></i>
+                </a>
+                <a href="http://www.instagram.com/" target="_blank">
+                  <i class="ion-social-instagram"></i>
+                </a>
+                <a href="http://www.whatsapp.com/" target="_blank">
+                  <i class="ion-social-whatsapp-outline"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container"
+          >
+            <div class="team-card">
+              <div class="img-wrapper">
+                <img class="team-img" src="static/assets/images/bayan.png" />
+              </div>
+              <p class="text-blk name">Bayan</p>
+              <p class="text-blk position">front-end</p>
+              <div class="social-media-links">
+                <a href="http://www.twitter.com/" target="_blank">
+                  <i class="ion-social-twitter"></i>
+                </a>
+                <a href="http://www.facebook.com/" target="_blank">
+                  <i class="ion-social-facebook"></i>
+                </a>
+                <a href="http://www.instagram.com/" target="_blank">
+                  <i class="ion-social-instagram"></i>
+                </a>
+                <a href="http://www.whatsapp.com/" target="_blank">
+                  <i class="ion-social-whatsapp-outline"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container"
+          >
+            <div class="team-card">
+              <div class="img-wrapper">
+                <img class="team-img" src="static/assets/images/kasem.png" />
+              </div>
+              <p class="text-blk name">Al-Kasem</p>
+              <p class="text-blk position">front-end</p>
+              <div class="social-media-links">
+                <a href="http://www.twitter.com/" target="_blank">
+                  <i class="ion-social-twitter"></i>
+                </a>
+                <a href="http://www.facebook.com/" target="_blank">
+                  <i class="ion-social-facebook"></i>
+                </a>
+                <a href="http://www.instagram.com/" target="_blank">
+                  <i class="ion-social-instagram"></i>
+                </a>
+                <a href="http://www.whatsapp.com/" target="_blank">
+                  <i class="ion-social-whatsapp-outline"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'assets/js/index.js' %}"></script>
+    {% endblock content %}
+    

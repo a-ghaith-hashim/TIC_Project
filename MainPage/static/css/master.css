@@ -1,0 +1,73 @@
+.book-restult {
+  padding: 30px 10px 20px 10px;
+  padding-top: 30px;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  margin: 15px;
+  border: 2px solid #dadde1 !important;
+  width: 250px;
+  height: 400px;
+  position: relative;
+  margin-left: 8%;
+}
+
+.book-restult a {
+  color: #ee7f43;
+  text-decoration: none;
+}
+
+.book-restult:hover {
+  border-color: #924f2c !important;
+  transition: 0.3s;
+  transform: translateY(-4px) !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+}
+
+.book-restult h3 {
+  margin-top: 20px;
+  height: 53px;
+  font-size: 25px;
+  color: #333;
+  align-self: center;
+}
+
+.books {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "books books books books  " "books books books books  " "foto foto foto foto ";
+  height: 100vh;
+  margin-top: 100px;
+}
+
+.book-restult img {
+  height: 270px;
+}
+
+.book-restult h3 {
+  grid-area: books;
+}
+
+footer {
+  grid-area: foto;
+}
+
+@media screen and (max-width: 600px) {
+  .books {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .book {
+    width: calc(33.33% - 10px);
+    margin: 5px;
+  }
+
+  .foto {
+    width: 100%;
+  }
+}

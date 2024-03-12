@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+<!-- Extending the template: This template inherits from the "base.html" template -->
+
+{% block title %} Create an account {% endblock title %}
+<!-- Defining the title content for this page as "Create an account" -->
+
+{% block content %}
+<div class="details">
+    <!-- Starting the main content block -->
+    <h1>Create a new account</h1>
+    <!-- Main heading prompting the creation of a new account -->
+
+    <p>Please, sign up using the following form:</p>
+    <!-- Instructional message asking the user to sign up using the form -->
+
+    <form method="post">
+        <!-- Start of the form with the method attribute set to 'post' -->
+        
+        {{ user_form.as_p }}
+        <!-- Rendering the form fields for the user model (presumed as 'user_form') in paragraph format -->
+
+        {% csrf_token %}
+        <!-- Including a CSRF token for security purposes -->
+
+        <p><input type="submit" value="Create an account"></p>
+        <!-- Submit button to create the account -->
+    </form>
+    <!-- End of the form -->
+   </div>
+{% endblock content%}
+<!-- End of the main content block -->

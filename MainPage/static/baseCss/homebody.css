@@ -1,0 +1,425 @@
+/* info css */
+.infohome
+{
+width: 95%;
+height: 550px;
+background: antiquewhite;
+display: flex ;
+margin: 80px auto;
+margin-bottom: 5px;
+border-radius: 20px;
+}
+.info-side
+{
+display: flex;
+margin-top: 30px;
+float: left;
+width: 100%;
+padding: 40px;
+height: 400px;
+}
+.info h1
+{
+font-size: 40px;
+text-align: center;
+}
+.info h2
+{
+font-size: 25px;
+margin-left: 40px;
+margin-bottom: 25px;
+margin-top: 25px;
+}
+.info h2 span
+{
+color: var(--nav-color);
+font-size: 30px;
+}
+.info p
+{
+line-height: 22px;
+font-size: 20px;
+margin-left: 40px;
+margin-bottom: 25px;
+}
+.info a
+{
+text-decoration: none;
+color: black;
+margin-top: 10px;
+}
+.info a i
+{
+font-size: 1.5rem;
+}/*End info css */
+
+@media (max-width: 790px) {
+  .infohome
+{
+width: 95%;
+height: 600px;
+display: flex ;
+margin: 80px auto;
+margin-bottom: 5px;
+border-radius: 20px;
+}
+}
+/* featured & newer books */
+  #featured-books .product-list {
+  border-bottom: 1px solid #E0E0E0;
+  margin-bottom: 30px;
+}
+.container::after,
+.row::after,
+.clearfix::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.section-header {
+  position: relative;
+}
+.section-header .section-title:before,
+.section-header .section-title:after {
+  content: "";
+  border-bottom: 1px solid #E0E0E0;
+  position: absolute;
+  top: 30px;
+  width: 25%;
+  align-items: center;
+}
+.section-header .section-title:before {
+  left: 3px;
+}
+
+.section-header .section-title:after {
+  right: 3px;
+}
+
+.section-header .title span {
+  font-size: 14px;
+  color: #afafaf;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 1366px) {
+
+  .section-header .section-title:before,
+  .section-header .section-title:after {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 999px) {
+
+  .section-header .section-title:before,
+  .section-header .section-title:after {
+    width: 25%;
+  }
+}
+  @media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 2em;
+  }
+
+  .section-header .section-title:before,
+  .section-header .section-title:after {
+    top: 60px;
+    width: 100%;
+  }
+}
+
+.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.section-title {
+  font-size: 3em;
+  font-weight: 500;
+  line-height: 1;
+  position: relative;
+  margin-bottom: 75px;
+}
+@media screen and (max-width: 768px) {
+  .section-title {
+    font-size: 2em;
+  }}
+.product-style img.product-item {
+  position: relative;
+  background: #ffffff;
+  border: 1.5px solid #924f2c;
+  padding: 15%;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 20px;
+}
+.product-item figcaption {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.product-item figcaption a>h3 {
+  font-size: 1.4em;
+  font-weight: 500;
+  margin: 0;
+}
+.product-item figcaption>p {
+  margin: 0;
+}
+.product-item figcaption a{
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+}
+.product-item .item-price {
+  font-size: 1.3em;
+}
+
+.product-style {
+  position: relative;
+  overflow: hidden;
+}
+.product-style figcaption p {
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .products-grid .product-item {
+    width: 45%;
+  }
+
+  .product-style img.product-item {
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  .products-grid.col-3 .product-style,
+  .products-grid.col-4 .product-style,
+  .products-grid.col-5 .product-style {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .products-grid .product-style {
+    width: 100%;
+  }
+}
+.btn-wrap {
+  text-transform: capitalize;
+}
+
+.btn-wrap a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-wrap a:hover {
+  color: #e9aa5d;
+}
+.btn-wrap i.icon {
+  transition: 0.5s ease-out;
+  font-size: 9px;
+  padding-left: 10px;
+}
+
+.btn-wrap:hover i.icon {
+  padding-left: 20px;
+}
+.btn-accent-arrow {
+  color: #111;
+}
+.align-right {
+  float: right;
+  text-align: right;
+}
+/* End featured & newer books */
+/* quotation */
+#quotation .section-title.divider,
+#quotation .section-title.divider:after {
+  margin: 0 auto;
+}
+
+#quotation blockquote {
+  width: 40%;
+  margin: 0 auto;
+}
+
+#quotation p {
+  display: block;
+  font-size: 1.6em;
+  padding: 40px 0;
+}
+
+#quotation .qubook-name {
+  font-family: "Prata", Georgia, serif;
+  font-size: 1.4em;
+}
+.section-title.divider {
+  width: 100%;
+}
+
+.section-title.divider:after {
+  content: "";
+  border-bottom: 3px solid #e9aa5d;
+  position: absolute;
+  right: 0;
+  bottom: -16px;
+  left: 0;
+  width: 300px;
+}
+@media screen and (max-width: 768px) {
+  #quotation blockquote {
+    width: 80%;
+  }
+  #quotation p{
+    font-size: 1.2em;
+  }
+  #quotation .qubook-name {
+    font-size: 1em;
+  }
+
+}
+/* End quotation */
+/* team */
+.text-blk {
+    font-family: 'Poppins', sans-serif;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  line-height: 25px;
+}
+
+.responsive-cell-block {
+  min-height: 75px;
+}
+
+.responsive-container-block {
+  min-height: 75px;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: space-evenly;
+  
+}
+
+.outer-container {
+  padding-top: 10px;
+  padding-right: 50px;
+  padding-bottom: 10px;
+  padding-left: 50px;
+  background: antiquewhite;
+  width: 95%;
+  margin-bottom: 15px;
+border-radius: 20px;
+
+}
+
+.inner-container {
+  max-width: 1320px;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  margin-right: auto;
+  margin-bottom: 50px;
+  margin-left: auto;
+}
+
+.section-head-text {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 48px;
+  margin: 0 0 10px 0;
+  
+}
+
+.section-subhead-text {
+  font-size: 25px;
+  color: rgb(153, 153, 153);
+  line-height: 35px;
+  max-width: 470px;
+  text-align: center;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 60px;
+  margin-left: 0px;
+  
+}
+.img-wrapper {
+  width: 100%;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.5px solid #924f2c;
+border-radius:20px ;
+margin: 10px;
+}
+
+.social-media-links {
+  width: 125px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.social-media-links a{
+    text-decoration: none;
+    color: rgba(81,81,81,1);
+}
+.social-media-links a i{
+  font-size: 27px;
+}
+.name {
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(102, 102, 102);
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+}
+.position {
+  font-family: "Prata", Georgia, serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #e9aa5d;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 50px;
+  margin-left: 0px;
+}
+
+.team-img {
+  width: 100%;
+  height: 100%;
+}
+
+.team-card-container {
+  width: 280px;
+  margin: 0 0 40px 0;
+}
+@media (max-width: 500px) {
+  .outer-container {
+    padding: 10px 20px 10px 20px;
+  }
+
+  .section-head-text {
+    text-align: center;
+  }
+}
+/* End team */

@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+<!-- Extending the template: This template inherits from the "base.html" template -->
+
+{% block title %} Login {% endblock %}
+<!-- Defining the title content for this page as "Login" -->
+
+{% block content %}
+    <!-- Starting the main content block -->
+    <div class="details" style="height: 550PX;">
+    <h1>Login</h1>
+    <!-- Main heading for the login page -->
+   
+    {% if form.errors %}
+
+        <!-- Checking for form errors -->
+      <p>
+            Your username and password did not match.
+            Please try again
+        </p>
+        <!-- Error message displayed if the username and password do not match -->
+  
+    {% else %}
+        <p>
+            Please enter your username and password.
+            If you do not have an account, <a href="{% url 'register' %}">Register here</a>
+        </p>
+        <!-- Instructional message for entering username and password, with a registration link -->
+    {% endif %}
+
+    <div class="login-form">
+        <!-- Division for the login form -->
+        <form action="{% url 'login' %}" method="post">
+            <!-- Login form with post method -->
+            {{ form.as_p }}
+            <!-- Rendering the form fields for login -->
+            {% csrf_token %}
+            <!-- Including a CSRF token for security -->
+            <input type="hidden" name="next" value="{{ next }}">
+            <!-- Hidden input to handle the next URL after login -->
+            <p><input type="submit" value="Login"></p>
+            <!-- Submit button for login -->
+        </form>
+
+        <p> 
+            <div style="margin-top: 50px;">
+            <a href="{% url 'password_reset' %}">
+                Forgotten your password?
+            </a>
+         </div>
+        </p>
+        <!-- Link to password reset page -->
+    </div>
+   </div>
+    <!-- End of login form division -->
+{% endblock %}
+<!-- End of the main content block -->

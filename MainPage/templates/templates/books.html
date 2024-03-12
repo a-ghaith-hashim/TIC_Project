@@ -1,0 +1,18 @@
+{% extends "home_base.html" %}
+{% load static %}
+<title>{% block title %}All books{% endblock title %}</title>
+{% block css %}
+<!-- ===== CSS ===== -->
+<link rel="stylesheet" href="{% static 'css/master.css' %}">
+{% endblock css %}
+{% block content %}
+<div class="books">
+{% for book in allBooks %}
+<div class="book-restult" >
+    <a class="img-a" title="{{book.title}}" href="{% url 'book_detail' book.id %}">
+        <img  src="{{book.photo_book.url}}">
+    <a href="/book/review/922253"><h3 itemprop="name">{{book.title}}</h3></a>
+    </div>
+{% endfor %}
+
+{% endblock content %}

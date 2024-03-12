@@ -1,0 +1,51 @@
+<footer class="footer-basic">
+  <!-- Start: Social Icons -->
+  <div  class ="social">
+    <a href="#"><i class="icon ion-social-whatsapp"></i></a
+    ><a href="#"><i class="icon ion-social-instagram"></i></a
+    ><a href="#"><i class="icon ion-social-twitter"></i></a
+    ><a href="#"><i class="icon ion-social-facebook"></i></a>
+  </div>
+  <!-- End: Social Icons --><!-- Start: Links -->
+  <ul class="list-inline">
+    <li class="list-inline-item"><a href="{% url 'homePage' %}">Home</a></li>
+    <li class="list-inline-item"><br /><a href="{% url 'about' %}">About</a><br /></li>
+    <li class="list-inline-item"><a href="{% url 'books' %}">Books</a></li>
+    <li class="list-inline-item"><a href="{% url 'homePage' %}">Contact</a></li>
+    <li class="list-inline-item">
+      <a href="#">Cart <i class="bx bx-cart"></i></a>
+    </li>
+  </ul>
+  <!-- End: Links --><!-- Start: Copyright -->
+  <p class="copyright">Boos Store © 2024</p>
+  <!-- End: Copyright -->
+</footer>
+
+<script>
+  const body = document.querySelector("body"),
+    nav = document.querySelector("nav"),
+    searchToggle = document.querySelector(".searchToggle"),
+    sidebarOpen = document.querySelector(".sidebarOpen"),
+    siderbarClose = document.querySelector(".siderbarClose");
+
+  // js code to toggle search box
+  searchToggle.addEventListener("click", () => {
+    searchToggle.classList.toggle("active");
+  });
+
+  //   js code to toggle sidebar
+  sidebarOpen.addEventListener("click", () => {
+    nav.classList.add("active");
+  });
+
+  body.addEventListener("click", (e) => {
+    let clickedElm = e.target;
+
+    if (
+      !clickedElm.classList.contains("sidebarOpen") &&
+      !clickedElm.classList.contains("menu")
+    ) {
+      nav.classList.remove("active");
+    }
+  });
+</script>

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+<!-- Extending the template: Uses the "base.html" template as the base for this page -->
+
+{% block title %}Edit your account{% endblock %}
+<!-- Defining the title content for this page as "Edit your account" -->
+
+{% block content %}
+    <!-- Starting the main content block -->
+ <div style="margin-top: 100px;" > <h1>Edit your account</h1></div>
+    <!-- Main heading -->
+
+    <div style="font-size: 20px; margin-top: 50px; font-weight: 800; "  > <p>You can edit your account using the following form:</p></div>
+    <!-- Explanation of the purpose of the form -->
+   
+    <form method="post", enctype="multipart/form-data">
+        <div class="details" style="margin-top:50PX ;">
+   
+        <!-- Start of the form with method and enctype attributes -->
+        
+        {{ user_form.as_p }}
+        <!-- Rendering the form fields for the user model (presumed as 'user_form') in paragraph format -->
+
+        {{ profile_form.as_p }}
+        <!-- Rendering the form fields for the profile model (presumed as 'profile_form') in paragraph format -->
+
+        {% csrf_token %}
+        <!-- Including a CSRF token for security purposes -->
+
+        <p><input type="submit" value="Save changes"></p>
+        <!-- Submit button to save the changes made in the form -->
+    </div>
+    </form>
+    <!-- End of the form -->
+
+{% endblock %}
+<!-- End of the main content block -->
